@@ -1,0 +1,2 @@
+<%= link_to refinery.root_path do %><h1 id='site_name'><%= Refinery::Core.site_name %></h1><% end %>
+<%= Refinery::Pages::MenuPresenter.new(refinery_menu_pages, self).to_html %>

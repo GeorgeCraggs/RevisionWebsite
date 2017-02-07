@@ -1,0 +1,33 @@
+#page-nav {
+
+}
+
+#page-nav {
+	h1 {
+		margin: 1rem;
+		font-size: 2rem;
+		text-align: left;
+	}
+}
+
+@import "../external/bounceToRight.scss";
+#topic_menu {
+	a {
+		display: inline-block;
+		padding: 0 0.8em;
+		//background: #00bcd4;
+		border-radius: 4px;
+		margin: 0.2em;
+		color: white;
+		text-decoration: none;
+		@include bounce-to-right();
+	}
+}
+
+#topic_menu li {
+	display: block;
+}
+
+#topic_menu > ul {
+	padding: 0;
+}

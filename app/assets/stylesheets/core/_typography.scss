@@ -1,0 +1,70 @@
+//
+//  Typographical styles. Prefix classes with t-
+//  (C) Copyright Terrabase 2015.
+//  All rights reserved.
+//
+
+html, body {
+	font-family: 'Maitree', sans-serif;
+	font-weight: normal;
+	font-size: 14pt;
+	text-rendering: optimizeLegibility;
+	-moz-font-feature-settings:"liga=1, dlig=1"; 
+	-moz-font-feature-settings:"liga", "dlig"; /* EDIT: new syntax for FF 15+ */ 
+	-ms-font-feature-settings:"liga", "dlig"; 
+	-o-font-feature-settings:"liga", "dlig"; 
+	-webkit-font-feature-settings:"liga", "dlig"; 
+	font-feature-settings:"liga", "dlig";
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Montserrat';
+}
+
+
+/**********************************************************
+  Google Fonts
+***********************************************************/
+
+$google-fonts-base-uri: 'https://fonts.googleapis.com/css';
+
+// Specify the name of each font, followed by a list of weights
+$fonts: (
+  Maitree: (300,400),
+  Montserrat: (400)
+);
+
+@each $font-family, $font-weights in $fonts {
+  @import url("#{$google-fonts-base-uri}?family=#{$font-family}:#{$font-weights}");
+  @each $font-weight in $font-weights {
+    .t-#{$font-family}-#{$font-weight} {
+      font-family: str$font-family;
+      font-weight: $font-weight;
+    }
+  }
+}
+
+
+/*********************************************************
+  Colours
+**********************************************************/
+
+$colour-map: (
+        primary: #4e9bd4,
+        secondary: #fe8d3c
+);
+
+@function colour($colour-name) {
+  @if map_has_key($colour-map, $colour-name) {
+    @return map-get($colour-map, $colour-name);
+  }
+
+  @warn "Unknown colour, `#{$colour-name}`.";
+  @return nil;
+}
+
+@each $colour-name, $colour-hex in $colour-map {
+  .t-colour-#{$colour-name} {
+    color: $colour-hex;
+  }
+}

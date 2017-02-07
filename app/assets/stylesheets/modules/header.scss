@@ -1,0 +1,91 @@
+#header {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	border-bottom: 1px solid #ccc;
+}
+
+#header {
+	h1, h2, h3, h4 {
+		font-size: 2rem;
+		margin: 1rem;
+	}
+}
+
+@import "../external/bob.scss";
+#header {
+	ul {
+		display: flex;
+		flex-direction: row;
+		padding: 0 1em;
+	}
+
+	li {
+		display: flex !important;
+		color: white;
+		//background: #ddd;
+		line-height: 1em;
+		flex-shrink: 0;
+		//@include radial-out();
+		//@include shutter-out-horizontal();
+		@include bob();
+	}
+}
+
+#header ul {
+	ul {
+		display: none;
+	}
+}
+
+#header {
+	a {
+		color: inherit;
+		text-decoration: none;
+		font-family: 'Montserrat';
+		font-weight: 300;
+		text-align: center;
+	}
+}
+
+#header li a {
+	padding: 0.3em 1em;
+}
+
+#header {
+	nav {
+		margin: auto 0;
+	}
+}
+#header {
+	li.selected > a::after {
+		//border-bottom: solid 1px #ccc;
+		//color: white;
+		//background: #d48200;
+		//transform: scaleY(1.25);
+		//content: '';
+		//background: black;
+		//opacity: 0.3;
+	}
+}
+
+@media screen and (max-width: 750px) {
+	#header {
+		display: block;
+		border: none;
+	}
+
+	#header ul {
+		padding: 0;
+		margin-bottom: 0;
+	}
+
+	#header li {
+		flex: 1;
+	}
+
+	#header li a {
+		width: 100%;
+	}
+
+}

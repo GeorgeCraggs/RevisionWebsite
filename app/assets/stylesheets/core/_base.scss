@@ -1,0 +1,71 @@
+//
+//  Base site styles (h1, h2, etc.)
+//  (C) Copyright Terrabase 2015.
+//  All rights reserved.
+//
+
+
+/*********************************************************
+  Headers
+**********************************************************/
+
+#site_name {
+	border: none;
+	padding: 0;
+}
+
+#page_title {
+	font-size: 2em;
+	margin: 2em 0 1em 0;
+	border: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Montserrat';
+}
+
+h1 {
+  position: relative;
+  font-size: 1.1em;
+  font-weight: normal;
+  margin-top: 1.8em;
+  padding-top: 0.2em;
+  border-top: 1px solid #ccc;
+}
+
+h2 {
+  font-size: 1.1em;
+  font-weight: normal;
+  margin: 1.4em 0 0 0;
+}
+
+h3 {
+	font-size: 1em;
+	margin: 1.4em 0 0 0;
+}
+
+h4 {
+
+}
+
+img {
+	margin: 0 1em;
+}
+
+
+/*********************************************************
+  Text Styles
+**********************************************************/
+
+p {
+  line-height: 150%;
+}
+
+
+/*********************************************************
+  Media Queries
+**********************************************************/
+
+//@media only screen and (max-width: 650px) and (-webkit-min-device-pixel-ratio: 2) {
+//	font-size: 1.5em;
+//}

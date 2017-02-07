@@ -1,0 +1,16 @@
+$colours: 
+#f44337 // Red
+#673ab7 // Deep Purple
+#e91e63 // Pink
+#2196f3 // Blue
+#3f51b5 // Indigo
+;
+
+$colour-count: length($colours);
+
+@for $i from 1 through $colour-count {
+	$colour: nth($colours, $i);
+	ul li:nth-child(#{$colour-count}n+#{$i}) > a {
+		background: $colour;
+	}
+}

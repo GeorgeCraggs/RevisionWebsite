@@ -1,0 +1,103 @@
+//
+//  Core layout styles. Prefix classes with l-
+//  (C) Copyright Terrabase 2015.
+//  All rights reserved.
+//
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#page-content {
+	max-width: 38em;
+}
+
+#page-nav {
+
+}
+
+#site-body {
+	padding: 1em;
+}
+
+
+/*********************************************************
+  Page Layout
+**********************************************************/
+
+#wrapper {
+  position: relative;
+  // To Prevent child element margin collapsing pushing the container down the page, leaving a white gap
+  display: inline-block;
+  // Remove white gap at bottom of page caused by being inline-block
+  vertical-align: top;
+  height: 100%;
+  width: 100%;
+  overflow: visible;
+
+  & > * {
+    margin: 6rem 0;
+    padding: 0 20%;
+  }
+}
+
+
+/*********************************************************
+  Grid
+**********************************************************/
+
+// Small screens l-s-
+// Medium screens l-m-
+// Large screens l-l-
+
+.l-row {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.l-col {
+  margin-left: 0;
+  margin-right: 0;
+  padding: 0;
+  flex: 0 0 100%;
+  //display: inline;
+  overflow: hidden;
+
+//  * {
+//    width: 100%;
+//  }
+}
+
+.l-col-pad {
+  box-sizing: border-box;
+  padding: 1em;
+}
+
+// Large screen media query layouts
+@media screen and (min-width: 992px) {
+  @for $i from 1 to 13 {
+    .l-l-#{$i} {
+      flex: 0 0 (99%/12*$i);
+    }
+  }
+}
+
+// Medium screen media query layouts
+@media screen and (min-width: 768px) {
+  @for $i from 1 to 13 {
+    .l-m-#{$i} {
+      flex: 0 0 (99%/12*$i);
+    }
+  }
+}
+
+// Small screen layouts
+@for $i from 1 to 13 {
+  .l-s-#{$i} {
+    flex: 0 0 (99%/12*$i);
+  }
+}

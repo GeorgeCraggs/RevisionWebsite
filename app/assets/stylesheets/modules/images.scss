@@ -1,0 +1,15 @@
+img.left {
+	float: left;
+}
+
+img.right {
+	float: right;
+}
+
+@media screen and (max-width: 700px) {
+	img.left, img.right {
+		float: none;
+		display: block;
+		margin: 0.2em auto;
+	}	
+}

@@ -1,0 +1,9 @@
+<% if false %><div id="page-nav" class="l-col l-m-3">
+	<h1><%= page_title %></h1>
+	<%= children_nav %>
+</div><% end %>
+<div id="page-content" class="l-col l-m-7">
+	<h1 id="page_title"><%= page_title %></h1>
+	<%= descendants_nav %>
+	<%= raw(@page.content_for(:body)) %>
+</div>
